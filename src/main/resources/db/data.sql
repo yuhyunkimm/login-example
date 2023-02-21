@@ -1,0 +1,1 @@
+INSERT INTO user_tb(username, password, email, enabled) values('ssar', '1234', 'ssar@nate.com', 'ss');
