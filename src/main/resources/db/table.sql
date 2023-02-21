@@ -3,6 +3,6 @@ CREATE TABLE user_tb(
     username varchar unique not null,
     password varchar not null,
     email varchar not null,
-    enabled varchar, 
+    created_at timestamp not null
 );
 commit;
