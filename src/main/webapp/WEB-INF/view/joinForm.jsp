@@ -16,7 +16,7 @@
             <form action="/join" method="post">
                 <input type="text" name="username" placeholder="enter username"><br>
                 <input type="password" name="password" placeholder="enter password"><br>
-                <input type="text" name="email" placeholder="enter fullname"><br>
+                <input type="text" name="email" placeholder="enter email"><br>
                 <button>회원가입</button>
             </form>
         </body>

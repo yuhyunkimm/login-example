@@ -2,6 +2,7 @@ package shop.mtcoding.loginexample.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import shop.mtcoding.loginexample.dto.UserReq.JoinReqDto;
@@ -10,6 +11,7 @@ import shop.mtcoding.loginexample.handler.ex.CustomException;
 import shop.mtcoding.loginexample.model.User;
 import shop.mtcoding.loginexample.model.UserRepository;
 
+@Service
 public class UserService {
 
     @Autowired
@@ -23,6 +25,7 @@ public class UserService {
         }
     }
 
+    @Transactional
     public User 로그인(LoginReqDto loginReqDto) {
         User principal = userRepository.findByUsernameAndPassword(loginReqDto.getUsername(), loginReqDto.getPassword());
         if (principal == null) {

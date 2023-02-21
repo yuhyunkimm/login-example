@@ -13,6 +13,9 @@ import shop.mtcoding.loginexample.handler.ex.CustomException;
 import shop.mtcoding.loginexample.model.User;
 import shop.mtcoding.loginexample.service.UserService;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Controller
 public class UserController {
 
@@ -21,6 +24,8 @@ public class UserController {
 
     @Autowired
     private HttpSession session;
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @PostMapping("/join")
     public String join(JoinReqDto joinReqDto) {
@@ -55,11 +60,11 @@ public class UserController {
 
     @GetMapping("/joinForm")
     public String joinForm() {
-        return "user/joinForm";
+        return "/joinForm";
     }
 
     @GetMapping("/loginForm")
     public String loginForm() {
-        return "user/loginForm";
+        return "/loginForm";
     }
 }
